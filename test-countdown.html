@@ -17,7 +17,7 @@
   text-align: center;
   transition: all 0.2s;
   margin: 0 auto;
-  width: 300px;
+  width: 600px;
 }
 button {
   background: #0084ff;
@@ -56,10 +56,12 @@ $(document).ready(function() {
 var banner = $("#banner-message")
 var button = $("button")
 var countDownDate = new Date("Mar 27, 2029 19:00:00").getTime();
+	
 function ld(number){
 	var lastone = number.toString().split('').pop();
 	return lastone;
 }
+	
 function UpdateCounter() {
 		var now = new Date().getTime();
   	var distance = countDownDate - now;
@@ -68,9 +70,9 @@ function UpdateCounter() {
   	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  	var h_add = " часов "; if(hours >= 2 && hours <= 4) {h_add = " часа "}; if(hours == 1) {h_add = "час"}
-  	var m_add = " минут "; if(minutes >= 2 && minutes <= 4) {m_add = " минуты "}; if(minutes == 1) {m_add = "минута"}
-  	var s_add = " секунд!"; if(seconds >= 2 && seconds <= 4) {s_add = " секунды!"}; if(seconds == 1) {s_add = "секунда!"}
+  	  var h_add = " часов "; if(ld(hours) >= 2 && ld(hours) <= 4) {h_add = " часа "}; if(ld(hours) == 1) {h_add = "час"}
+  	var m_add = " минут "; if(ld(minutes) >= 2 && ld(minutes) <= 4) {m_add = " минуты "}; if(ld(minutes) == 1) {m_add = "минута"}
+  	var s_add = " секунд!"; if(ld(seconds) >= 2 && ld(seconds) <= 4) {s_add = " секунды!"}; if(ld(seconds) == 1) {s_add = "секунда!"}
   
   	$("#howmuch").html(hours + h_add + minutes + m_add + seconds + s_add);
 }
