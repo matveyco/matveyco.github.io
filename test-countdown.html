@@ -70,9 +70,9 @@ function UpdateCounter() {
   	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   
-  	  var h_add = " часов "; if(ld(hours) >= 2 && ld(hours) <= 4) {h_add = " часа "}; if(ld(hours) == 1) {h_add = "час"}
-  	var m_add = " минут "; if(ld(minutes) >= 2 && ld(minutes) <= 4) {m_add = " минуты "}; if(ld(minutes) == 1) {m_add = "минута"}
-  	var s_add = " секунд!"; if(ld(seconds) >= 2 && ld(seconds) <= 4) {s_add = " секунды!"}; if(ld(seconds) == 1) {s_add = "секунда!"}
+  	var h_add = " часов "; if(ld(hours) >= 2 && ld(hours) <= 4) {h_add = " часа "}; if(ld(hours) == 1) {h_add = " час "}
+  	var m_add = " минут "; if(ld(minutes) >= 2 && ld(minutes) <= 4) {m_add = " минуты "}; if(ld(minutes) == 1) {m_add = " минута "}
+  	var s_add = " секунд!"; if(ld(seconds) >= 2 && ld(seconds) <= 4) {s_add = " секунды!"}; if(ld(seconds) == 1) {s_add = " секунда!"}
   
   	$("#howmuch").html(hours + h_add + minutes + m_add + seconds + s_add);
 }
